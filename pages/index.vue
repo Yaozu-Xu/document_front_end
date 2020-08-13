@@ -7,6 +7,7 @@
         <h4>Example heading <b-badge>New</b-badge></h4>
         <h5>Example heading <b-badge>New</b-badge></h5>
         <h6>Example heading <b-badge>New</b-badge></h6>
+        <input type="text" data-test="inputtest">
       </div>
       <Logo />
       <h1 class="title">
