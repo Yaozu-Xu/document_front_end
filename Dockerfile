@@ -9,9 +9,12 @@ WORKDIR /usr/src/nuxt-app
 RUN apk update && apk upgrade
 RUN apk add git
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
+COPY package*.json ./
+
 RUN npm install --production
+
+# copy the app, note .dockerignore
+COPY . .
 RUN npm run build
 
 EXPOSE 3000
