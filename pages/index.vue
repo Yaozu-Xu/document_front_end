@@ -1,6 +1,14 @@
 <template>
   <div class="container">
     <div>
+      <div>
+        <h2>Example heading <b-badge>New</b-badge></h2>
+        <h3>Example heading <b-badge>New</b-badge></h3>
+        <h4>Example heading <b-badge>New</b-badge></h4>
+        <h5>Example heading <b-badge>New</b-badge></h5>
+        <h6>Example heading <b-badge>New</b-badge></h6>
+        <input type="text" data-test="inputtest">
+      </div>
       <Logo />
       <h1 class="title">
         muti_language
@@ -31,7 +39,7 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
