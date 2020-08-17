@@ -1,30 +1,65 @@
-## Multi language documents platform --- Front end
+# Multi language documents platform --- Front end
 
-## Build Setup with using Docker
-    cd multi-language-documents-platform-front-end
-    docker-compose run -p 3000:3000 dev sh
+## Development environment
+
+### Use Docker
+
+```
+docker-compose run -p 3000:3000 dev sh
+```
 
 ### Or install NodeJS 12.18.3
 
 ## Launch
-#### Install dependencies
-    npm run install
 
-#### Build nuxt project
-    npm run build
+### Install dependencies
 
-## Only run project 
-#### Run project in development mode
-    npm run dev
-#### Run project in production mode
-    npm run start
+```
+npm run install
+```
 
-## Run project and test
-    npm run test-ci
-  this command will run project firstly, and then run the test automaticly.
-## Run test seperately
-#### first, you need to run project first, and then
-    npm run test
+### Install Cypress for testing
+
+```
+npx cypress install
+```
+
+### Build project
+
+```
+npm run build
+```
+
+### Run project in development mode
+
+```
+npm run dev
+```
+
+### Run project in production mode
+
+```
+npm run start
+```
+
+### Run tests
+
+```
+npm run test
+```
+
+> Project should has been started before running this command
+
+### Run project and test
+
+```
+npm run test-ci
+```
+
+> Project will be started and tested automatically
    
-## generate static project
-    npm run generate
+### Generate static pages for project
+
+```
+npm run generate
+```
