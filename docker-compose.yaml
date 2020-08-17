@@ -1,0 +1,16 @@
+version: "3.2"
+services:
+  dev:
+    image: "cypress/base:12.18.2"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/root/multi-language-documents-platform-front-end"
+      - "multi-language-documents-platform-npm-cache:/root/.npm"
+      - "multi-language-documents-platform-cypress-cache:/root/.cache/Cypress"
+    working_dir: "/root/multi-language-documents-platform-front-end"
+volumes:
+  multi-language-documents-platform-npm-cache:
+    external: false
+  multi-language-documents-platform-cypress-cache:
+    external: false
