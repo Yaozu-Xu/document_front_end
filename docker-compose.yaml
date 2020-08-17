@@ -2,6 +2,8 @@ version: "3.2"
 services:
   dev:
     image: "cypress/base:12.18.2"
+    environment:
+      - "NUXT_HOST=0.0.0.0"
     ports:
       - "3000:3000"
     volumes:
