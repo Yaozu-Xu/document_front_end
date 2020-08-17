@@ -2,7 +2,7 @@
 
 ## Build Setup with using Docker
     cd multi-language-documents-platform-front-end
-    docker-compose run dev sh
+    docker-compose run -p 3000:3000 dev sh
 
 ### Or install NodeJS 12.18.3
 
