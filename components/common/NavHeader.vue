@@ -1,7 +1,7 @@
 <template>
-  <div>
-    aaa
-  </div>
+  <b-nav-bar>
+    Header
+  </b-nav-bar>
 </template>
 
 <script>
