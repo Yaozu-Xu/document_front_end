@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid>
+  <b-container>
     <NavHeader />
   </b-container>
 </template>
