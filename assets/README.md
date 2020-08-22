@@ -1,7 +1,7 @@
-# ASSETS
+# Main file
 
-**This directory is not required, you can delete it if you don't want to use it.**
+The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
 
-This directory contains your un-compiled assets such as LESS, SASS, or JavaScript.
+*Note: when using [Eyeglass](https://github.com/sass-eyeglass/eyeglass) for distribution, it might be a fine idea to name this file `index.scss` rather than `main.scss` in order to stick to [Eyeglass modules specifications](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass-module-with-sass-files). See [#21](https://github.com/HugoGiraudel/sass-boilerplate/issues/21) for reference.*
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#webpacked).
+Reference: [Sass Guidelines](http://sass-guidelin.es/) > [Architecture](http://sass-guidelin.es/#architecture) > [Main file](http://sass-guidelin.es/#main-file)

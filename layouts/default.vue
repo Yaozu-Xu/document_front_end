@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <navg />
-    <Nuxt />
+  <div class="layout-default">
+    <b-container fluid>
+      <b-row fluid>
+        <navg />
+      </b-row>
+      <b-row>
+        <Nuxt />
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -14,6 +20,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import "@/assets/main.scss";
 </style>

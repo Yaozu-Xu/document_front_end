@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+// -----------------------------------------------------------------------------
+
+/// @type Color
+
+$text-color: rgb(34, 34, 34) !default;
+
+$brand-color: rgb(229, 0, 80) !default;
+
+$light-grey: rgb(237, 237, 237) !default;
+
+$mid-grey: rgb(153, 153, 153) !default;
+
+$dark-grey: rgb(68, 68, 68) !default;
+
+$bootstrap-nav-color: rgb(86, 61, 124) !default;
+
+$github-nav-color: rgb(36, 41, 46) !default;
+
+$nuxt-theme-color: rgb(0, 197, 142) !default;
+// -----------------------------------------------------------------------------
+
+///@type Font
+$lg-font: 1rem;
+
+$sm-font: 0.7rem;
+
+$current-font: $lg-font;
+// -----------------------------------------------------------------------------
+
+/// @type Length
+
+$max-width: 1180px !default;
+
+
+// -----------------------------------------------------------------------------
+
+/// @type border
+$common-border: 1px solid rgba(0,0,0,0.05)
