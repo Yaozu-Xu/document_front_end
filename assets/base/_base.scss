@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.block {
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.duration-300 {
+  transition-duration: .3s;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.item-center {
+  align-items: center;
+}

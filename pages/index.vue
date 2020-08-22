@@ -3,21 +3,22 @@
     <b-container class="p-0" fluid>
       <b-row no-gutters>
         <div
-          class="mt-1 index_mobile"
           :class="{
-            'index_mobile--enter': isSidebarOpen,
-            'index_mobile--back': !isSidebarOpen,
+            'mt-1': true,
+            index_mobile: true,
+            'index_mobile--enter': enterbutton,
+            'index_mobile--back': backbutton,
           }"
         >
           <div>
-            <sidebar />
+            <siderbar />
             <b-icon
               icon="arrow-return-left"
               class="index_mobile_backbutton"
-              @click="ToggleSidebar"
+              @click="BackSiderbar"
             />
           </div>
-          <button class="index_mobile_enterbutton" @click="ToggleSidebar">
+          <button class="index_mobile_enterbutton" @click="EnterSiderbar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -40,11 +41,13 @@
           </button>
         </div>
 
-        <b-col cols="4" lg="2" class="mt-1 border-right d-none d-sm-block">
-          <sidebar />
+        <b-col cols="4" lg="2" class="mt-1 index_col--web">
+          <siderbar />
         </b-col>
-        <b-col class="mt-1">
-          <document-container />
+        <b-col cols="12" lg="10" class="mt-1" style="z-index: -1">
+          1111111111111111111<br />
+          1111111111111111111<br />
+          占位
         </b-col>
       </b-row>
     </b-container>
@@ -112,6 +115,7 @@ export default {
 
   &--enter {
     transform: translateX(0);
+<<<<<<< HEAD
     transition-duration: 0.35s;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
@@ -123,5 +127,29 @@ export default {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
+=======
+    transition-duration: .35s;
+    transition-property: transform;
+    transition-timing-function:cubic-bezier(0.4,0,0.6,1);
+  }
+
+  &--back {
+    transform: translateX(calc(-100% - 1px));
+    transition-duration: .35s;
+    transition-property: transform;
+    transition-timing-function:cubic-bezier(0.4,0,0.6,1);
+  }
+}
+
+.index_col {
+  &--web {
+    border-right: $common-border;
+
+    @media screen and (max-width: 600px){
+      display: none;
+    }
+  }
+
+>>>>>>> 571b903... Feature: Create navigation and siderbar component, also support mobile device.
 }
 </style>
