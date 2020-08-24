@@ -1,8 +1,8 @@
 <template>
-  <div class="layout-default">
+  <div>
     <b-container fluid>
       <b-row fluid>
-        <navg />
+        <navbar />
       </b-row>
       <b-row>
         <Nuxt />
@@ -42,6 +42,7 @@ html {
 </style>
 
 <script>
+<<<<<<< HEAD
 import navbar from "../components/public/nav.vue";
 
 export default {
@@ -50,3 +51,16 @@ export default {
   },
 };
 </script>
+=======
+import navbar from '../components/public/nav'
+export default {
+  components: {
+    navbar
+  }
+}
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/main.scss";
+</style>
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap

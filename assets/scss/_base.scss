@@ -1,24 +1,43 @@
+<<<<<<< HEAD
 @import "variables";
 @import "@/node_modules/bootstrap/scss/bootstrap.scss";
+=======
+@import 'variables';
+@import '@/node_modules/bootstrap/scss/bootstrap.scss';
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap
 
 body {
   @extend .font-body;
   line-height: 1.5;
 }
 
+<<<<<<< HEAD
 *,
 :after,
 :before {
+=======
+*,:after,:before {
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap
   box-sizing: border-box;
   border: 0 solid #e2e8f0;
 }
 
+<<<<<<< HEAD
 .font-body {
   @include font-size(1rem);
 }
 
 .font-sublist {
   @include font-size(0.75rem);
+=======
+
+.font-body {
+  @include font-size(1rem)
+}
+
+.font-sublist {
+  @include font-size(0.75rem)
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap
 }
 
 .index_list--hover:hover {
@@ -63,4 +82,8 @@ body {
 
 .bg-lightgrey {
   background-color: lightgray;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap

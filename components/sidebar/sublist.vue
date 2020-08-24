@@ -18,6 +18,7 @@ export default {
   props: {
     sublist: {
       type: Array,
+<<<<<<< HEAD
       default() {
         return [];
       },
@@ -30,3 +31,19 @@ export default {
 </script>
 
 <style lang="scss"></style>
+=======
+      default  () {
+        return []
+      }
+    }
+  },
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+</style>
+>>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap

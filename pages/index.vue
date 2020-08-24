@@ -15,40 +15,53 @@
             <b-icon
               icon="arrow-return-left"
               class="index_mobile_backbutton"
+              :class="{
+                'index_mobile--enter': isSidebarOpen,
+                'index_mobile--back': !isSidebarOpen,
+              }"
               @click="BackSiderbar"
-            />
-          </div>
-          <button class="index_mobile_enterbutton" @click="EnterSiderbar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
             >
-              <line x1="8" x2="21" y1="6" y2="6" />
-              <line x1="8" x2="21" y1="12" y2="12" />
-              <line x1="8" x2="21" y1="18" y2="18" />
-              <line x1="3" x2="3" y1="6" y2="6" />
-              <line x1="3" x2="3" y1="12" y2="12" />
-              <line x1="3" x2="3" y1="18" y2="18" />
-            </svg>
-          </button>
-        </div>
+              <div>
+                <sidebar />
+                <b-icon
+                  icon="arrow-return-left"
+                  class="index_mobile_backbutton"
+                  @click="ToggleSidebar"
+                />
+              </div>
+              <button class="index_mobile_enterbutton" @click="ToggleSidebar">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
+                >
+                  <line x1="8" x2="21" y1="6" y2="6" />
+                  <line x1="8" x2="21" y1="12" y2="12" />
+                  <line x1="8" x2="21" y1="18" y2="18" />
+                  <line x1="3" x2="3" y1="6" y2="6" />
+                  <line x1="3" x2="3" y1="12" y2="12" />
+                  <line x1="3" x2="3" y1="18" y2="18" />
+                </svg>
+              </button>
+            </b-icon>
+          </div>
 
-        <b-col cols="4" lg="2" class="mt-1 index_col--web">
-          <siderbar />
-        </b-col>
-        <b-col cols="12" lg="10" class="mt-1" style="z-index: -1">
-          1111111111111111111<br />
-          1111111111111111111<br />
-          占位
-        </b-col>
+          <b-col cols="4" lg="2" class="mt-1 border-right d-none d-sm-block">
+            <sidebar />
+          </b-col>
+          <b-col cols="8" lg="10" class="mt-1" style="z-index: -1">
+            1111111111111111111<br />
+            1111111111111111111<br />
+            占位
+          </b-col>
+        </div>
       </b-row>
     </b-container>
   </div>
@@ -77,6 +90,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/main.scss";
+
 .index_mobile {
   @extend .w-100;
   @extend .bg-white;
@@ -87,6 +102,7 @@ export default {
 
   &_backbutton,
   &_enterbutton {
+  &_backbutton,&_enterbutton {
     @extend .border-right;
     @extend .shadow;
     @extend .position-absolute;
@@ -94,8 +110,8 @@ export default {
     @extend .justify-content-center;
     @extend .z-20;
     transform: translateX(100%);
-    top: 4rem;
-    right: 0;
+    top:4rem;
+    right:0;
   }
 
   &_enterbutton {
@@ -115,7 +131,6 @@ export default {
 
   &--enter {
     transform: translateX(0);
-<<<<<<< HEAD
     transition-duration: 0.35s;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
@@ -127,7 +142,6 @@ export default {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
-=======
     transition-duration: .35s;
     transition-property: transform;
     transition-timing-function:cubic-bezier(0.4,0,0.6,1);
@@ -149,7 +163,4 @@ export default {
       display: none;
     }
   }
-
->>>>>>> 571b903... Feature: Create navigation and siderbar component, also support mobile device.
-}
 </style>
