@@ -2,12 +2,16 @@
   <div class="w-100">
     <b-container class="p-0" fluid>
       <b-row no-gutters>
-        <div :class="{'mt-1':true,'index_mobile':true,'index_mobile--enter':enterbutton,'index_mobile--back':backbutton}">
+        <div class="mt-1 index_mobile" :class="{'index_mobile--enter':isSidebarOpen,'index_mobile--back':!isSidebarOpen}">
           <div>
-            <siderbar />
-            <b-icon icon="arrow-return-left" class="index_mobile_backbutton" @click="BackSiderbar" />
+            <sidebar />
+            <b-icon
+              icon="arrow-return-left"
+              class="index_mobile_backbutton"
+              @click="ToggleSidebar"
+            />
           </div>
-          <button class="index_mobile_enterbutton" @click="EnterSiderbar">
+          <button class="index_mobile_enterbutton" @click="ToggleSidebar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -53,10 +57,10 @@
           </button>
         </div>
 
-        <b-col cols="4" lg="2" class="mt-1 index_col--web">
-          <siderbar />
+        <b-col cols="4" lg="2" class="mt-1 border-right d-none d-sm-block">
+          <sidebar />
         </b-col>
-        <b-col cols="12" lg="10" class="mt-1" style="z-index:-1">
+        <b-col cols="8" lg="10" class="mt-1" style="z-index:-1">
           1111111111111111111<br>
           1111111111111111111<br>
           占位
@@ -67,65 +71,57 @@
 </template>
 
 <script>
-import siderbar from '../components/SiderBar/index'
+import sidebar from '../components/sidebar/sidebar'
 export default {
   components: {
-    siderbar
+    sidebar
   },
   data () {
     return {
-      backbutton: true,
-      enterbutton: false
+      isSidebarOpen: true
     }
   },
   methods: {
-    EnterSiderbar () {
-      this.backbutton = !this.backbutton
-      this.enterbutton = !this.enterbutton
-    },
-    BackSiderbar () {
-      this.backbutton = !this.backbutton
-      this.enterbutton = !this.enterbutton
+    ToggleSidebar () {
+      this.isSidebarOpen = !this.isSidebarOpen
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/main.scss";
+@import "@/assets/scss/main.scss";
 
 .index_mobile {
-  width: 100%;
-  background-color: white;
-  box-shadow:0 0 8px rgba(0,0,0,0.10);
-  @extend .fixed;
+  @extend .w-100;
+  @extend .bg-white;
+  @extend .shadow;
+  @extend .position-fixed;
+  @extend .d-block;
+  @extend .d-sm-none;
 
   &_backbutton,&_enterbutton {
-    border-right: $common-border;
-    right:0;
-    width: 2.5rem;
-    top: 4rem;
-    box-shadow: 4px 2px 4px rgba(0,0,0,0.2);
-    transform: translateX(100%);
-    @extend .absolute;
-    @extend .flex;
-    @extend .justify-center;
+    @extend .border-right;
+    @extend .shadow;
+    @extend .position-absolute;
+    @extend .d-flex;
+    @extend .justify-content-center;
     @extend .z-20;
-
-    @media screen and (min-width: 600px){
-      display: none;
-    }
+    transform: translateX(100%);
+    top:4rem;
+    right:0;
   }
 
   &_enterbutton {
+    @extend .rounded-pill;
+    @extend .align-items-center;
+    @extend .shadow;
     height: 2rem;
-    border-radius: 0 9999px 9999px 0;
-    @extend .item-center;
   }
 
   &_backbutton {
-    background-color: rgb(237, 242, 247);
-    border-radius: 100%;
+    @extend .bg-lightgrey;
+    @extend .rounded-circle;
     width: 2rem;
     height: 2rem;
     transform: translateX(-50%);
@@ -146,14 +142,4 @@ export default {
   }
 }
 
-.index_col {
-  &--web {
-    border-right: $common-border;
-
-    @media screen and (max-width: 600px){
-      display: none;
-    }
-  }
-
-}
 </style>

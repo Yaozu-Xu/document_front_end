@@ -1,8 +1,8 @@
 <template>
-  <div class="layout-default">
+  <div>
     <b-container fluid>
       <b-row fluid>
-        <navg />
+        <navbar />
       </b-row>
       <b-row>
         <Nuxt />
@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import navg from '../components/public/nav'
+import navbar from '../components/public/nav'
 export default {
   components: {
-    navg
+    navbar
   }
 }
 </script>
 
 <style lang="scss">
-@import "@/assets/main.scss";
+@import "@/assets/scss/main.scss";
 </style>
