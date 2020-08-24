@@ -57,7 +57,9 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // A pacakge for importing scss globally
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Axios module configuration
@@ -70,5 +72,12 @@ export default {
   */
   build: {
     transpile: [/^element-ui/]
+  },
+
+  // globally import scss
+  styleResources: {
+    scss: [
+      '~/assets/scss/main.scss'
+    ]
   }
 }
