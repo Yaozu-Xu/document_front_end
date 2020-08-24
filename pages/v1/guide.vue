@@ -1,8 +1,5 @@
 <template>
   <b-container class="d-flex">
-    <!-- <b-container class="d-flex w-25 h-100">
-      aaa
-    </b-container> -->
     <NavHeader />
   </b-container>
 </template>
