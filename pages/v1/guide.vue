@@ -1,14 +1,14 @@
 <template>
-  <b-container class="d-flex">
-    <DocumentConatiner />
+  <b-container>
+    <document-container />
   </b-container>
 </template>
 
 <script>
-import DocumentConatiner from '~/components/common/DocumentConatiner'
+import DocumentContainer from '~/components/common/DocumentContainer'
 export default {
   components: {
-    DocumentConatiner
+    'document-container': DocumentContainer
   }
 }
 </script>
