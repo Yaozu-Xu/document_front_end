@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="mt-5 mb-5 d-flex flex-column document">
-    <b-container class="document__content mb-5">
+    <b-container class="document-content mb-5">
       <!-- The id and href are rendered by backend apis, which is correspond with the content of leftsidebar -->
       <h2 id="t1" class="pb-3 mb-4">
         <a href="#t1">Vue.js是什么</a>
@@ -9,7 +9,7 @@
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
     </b-container>
-    <b-container class="document__content mb-4">
+    <b-container class="document-content mb-4">
       <h2 id="t2" class="pb-3 mb-4">
         <a href="#t2">Vue.js是什么</a>
       </h2>
@@ -17,7 +17,7 @@
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
     </b-container>
-    <b-container class="document__content mb-4">
+    <b-container class="document-content mb-4">
       <h2 id="t3" class="pb-3 mb-4">
         <a href="#t3">Vue.js是什么</a>
       </h2>
@@ -25,7 +25,7 @@
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
       <p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
     </b-container>
-    <b-container class="document__content mb-4">
+    <b-container class="document-content mb-4">
       <h2 id="t4" class="pb-3 mb-4">
         <a href="#t4">Vue.js是什么</a>
       </h2>
@@ -41,8 +41,8 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.document-container {
-  .items {
+.document{
+  .document-content {
     h2 {
       border-bottom: 1px solid #ddd;
       a {
