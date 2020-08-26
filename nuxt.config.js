@@ -57,7 +57,9 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // A pacakge for importing scss globally
+    '@nuxtjs/style-resources'
   ],
   bootstrapVue: {
     icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
@@ -73,5 +75,12 @@ export default {
   */
   build: {
     transpile: [/^element-ui/]
+  },
+
+  // globally import scss
+  styleResources: {
+    scss: [
+      '~/assets/scss/main.scss'
+    ]
   }
 }

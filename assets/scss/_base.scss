@@ -1,8 +1,9 @@
-@import 'variables';
+@import '_variables.scss';
 @import '@/node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
   @extend .font-body;
+  font-family: $font-family-base;
   line-height: 1.5;
 }
 
@@ -11,6 +12,14 @@ body {
   border: 0 solid #e2e8f0;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: $font-size-base;
+}
 
 .font-body {
   @include font-size(1rem)
@@ -63,3 +72,4 @@ body {
 .bg-lightgrey {
   background-color: lightgray;
 }
+
