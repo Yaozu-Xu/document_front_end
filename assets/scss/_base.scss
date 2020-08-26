@@ -1,0 +1,74 @@
+@import 'variables';
+@import '@/node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+  @extend .font-body;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+*,:after,:before {
+  box-sizing: border-box;
+  border: 0 solid #e2e8f0;
+}
+
+
+p {
+  font-size: $font-size-base;
+}
+
+.font-body {
+  @include font-size(1rem)
+}
+
+.font-sublist {
+  @include font-size(0.75rem)
+}
+
+.index_list--hover:hover {
+  @extend .text-info;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 0.2;
+}
+
+.opacity-2 {
+  opacity: 0.4;
+}
+
+.opacity-3 {
+  opacity: 0.6;
+}
+
+.opacity-4 {
+  opacity: 0.8;
+}
+
+.opacity-5 {
+  opacity: 1;
+}
+
+.opacity-4h5 {
+  @extend .opacity-4;
+
+  &:hover {
+    @extend .opacity-5;
+  }
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.bg-lightgrey {
+  background-color: lightgray;
+}
