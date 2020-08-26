@@ -90,8 +90,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/main.scss";
-
 .index_mobile {
   @extend .w-100;
   @extend .bg-white;

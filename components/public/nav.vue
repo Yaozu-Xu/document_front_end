@@ -1,15 +1,10 @@
 <template>
   <div class="w-100">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <b-navbar toggleable="lg" type="dark" class="w-100 bg-info">
       <b-navbar-brand href="#"> Multi </b-navbar-brand>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark" class="nav-position">
-=======
     <b-navbar toggleable="lg" type="dark" class="w-100 nav--color">
->>>>>>> 571b903... Feature: Create navigation and siderbar component, also support mobile device.
-=======
     <b-navbar
       toggleable="lg"
       type="dark"
