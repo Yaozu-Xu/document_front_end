@@ -12,12 +12,13 @@
 </template>
 
 <script>
-import navbar from '../components/public/nav'
+import navbar from "../components/public/nav.vue";
+
 export default {
   components: {
-    navbar
-  }
-}
+    navbar,
+  },
+};
 </script>
 
 <style lang="scss">

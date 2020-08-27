@@ -18,17 +18,15 @@ export default {
   props: {
     sublist: {
       type: Array,
-      default  () {
-        return []
-      }
-    }
+      default() {
+        return [];
+      },
+    },
   },
-  data () {
-    return {
-    }
-  }
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

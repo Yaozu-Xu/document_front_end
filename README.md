@@ -57,7 +57,7 @@ npm run test-ci
 ```
 
 > Project will be started and tested automatically
-   
+
 ### Generate static pages for project
 
 ```
