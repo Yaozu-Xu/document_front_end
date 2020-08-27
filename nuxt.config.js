@@ -74,4 +74,5 @@ export default {
   styleResources: {
     scss: ["~/assets/scss/main.scss"],
   },
+  build: {},
 };
