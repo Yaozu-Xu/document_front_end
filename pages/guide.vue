@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DocumentContainer from '~/components/common/DocumentContainer'
+import DocumentContainer from '~/components/public/DocumentContainer'
 export default {
   components: {
     'document-container': DocumentContainer
