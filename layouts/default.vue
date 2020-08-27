@@ -4,6 +4,7 @@
   </div>
 </template>
 
+<<<<<<< HEAD
 <style>
 html {
   font-family:
@@ -60,3 +61,14 @@ html {
   background-color: #35495e;
 }
 </style>
+=======
+<script>
+import navbar from "../components/public/nav.vue";
+
+export default {
+  components: {
+    navbar,
+  },
+};
+</script>
+>>>>>>> b32a0ab... Refactor: Running the prettier scripts
