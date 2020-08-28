@@ -7,8 +7,15 @@
         placeholder="Search..."
       />
     </b-form>
-    <b-list-group class="d-block overflow-auto" style="max-height: calc(100vh - 1rem)">
-      <b-list-group-item v-for="(item, index) in sidebarList" :key="index" class="m-0 border-0 px-1 py-2">
+    <b-list-group
+      class="d-block overflow-auto"
+      style="max-height: calc(100vh - 1rem)"
+    >
+      <b-list-group-item
+        v-for="(item, index) in sidebarList"
+        :key="index"
+        class="m-0 border-0 px-1 py-2"
+      >
         <b-container>
           <b-row no-gutters>
             <b-col cols="1" md="2">
@@ -21,24 +28,29 @@
                 stroke-width="1.5"
                 viewBox="0 0 24 24"
                 class="w-auto h-auto"
-              ><polyline
-                 points="9 18 15 12 9 6"
-                 :class="{'d-none':currentIndex === index}"
-               />
+              >
+                <polyline
+                  points="9 18 15 12 9 6"
+                  :class="{ 'd-none': currentIndex === index }"
+                />
                 <polyline
                   points="6 9 12 15 18 9"
-                  :class="{'d-none':currentIndex !== index}"
+                  :class="{ 'd-none': currentIndex !== index }"
                 />
               </svg>
             </b-col>
             <b-col cols="11" md="10">
-              <span role="button" class="index_list--hover user-select-none text-uppercase" @click="ContentToogle(index)">
+              <span
+                role="button"
+                class="index_list--hover user-select-none text-uppercase"
+                @click="ContentToogle(index)"
+              >
                 {{ item.content }}
               </span>
             </b-col>
           </b-row>
         </b-container>
-        <div :class="{'d-none':currentIndex!==index}">
+        <div :class="{ 'd-none': currentIndex !== index }">
           <listitem :sublist="item.sublist" />
         </div>
       </b-list-group-item>
@@ -47,27 +59,26 @@
 </template>
 
 <script>
-import listitem from './sublist'
-import { sidebarList } from './sidebarList'
+import listitem from "./sublist.vue";
+import { sidebarList } from "./sidebarList";
+
 export default {
   components: {
-    listitem
+    listitem,
   },
-  data () {
+  data() {
     return {
       currentIndex: -1,
-      sidebarList
-    }
+      sidebarList,
+    };
   },
-  mounted () {
-  },
+  mounted() {},
   methods: {
-    ContentToogle (i) {
-      this.currentIndex = (this.currentIndex === -1) ? i : -1
-    }
-  }
-}
+    ContentToogle(i) {
+      this.currentIndex = this.currentIndex === -1 ? i : -1;
+    },
+  },
+};
 </script>
 
-<style lang='scss'>
-</style>
+<style lang="scss"></style>
