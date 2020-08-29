@@ -70,10 +70,6 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    transpile: [/^element-ui/],
-  },
-
   // globally import scss
   styleResources: {
     scss: ["~/assets/scss/main.scss"],
