@@ -3,18 +3,11 @@
     <b-container class="p-0" fluid>
       <b-row no-gutters>
         <div
-<<<<<<< HEAD
           :class="{
             'mt-1': true,
             index_mobile: true,
             'index_mobile--enter': enterbutton,
             'index_mobile--back': backbutton,
-=======
-          class="mt-1 index_mobile"
-          :class="{
-            'index_mobile--enter': isSidebarOpen,
-            'index_mobile--back': !isSidebarOpen,
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
           }"
         >
           <div>
@@ -59,18 +52,6 @@
               </button>
             </b-icon>
           </div>
-<<<<<<< HEAD
-
-          <b-col cols="4" lg="2" class="mt-1 border-right d-none d-sm-block">
-            <sidebar />
-          </b-col>
-          <b-col cols="8" lg="10" class="mt-1" style="z-index: -1">
-            1111111111111111111<br />
-            1111111111111111111<br />
-            占位
-          </b-col>
-        </div>
-=======
           <button class="index_mobile_enterbutton" @click="ToggleSidebar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,26 +83,19 @@
           1111111111111111111<br />
           占位
         </b-col>
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
       </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import DocumentContainer from "../components/public/DocumentContainer.vue";
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
 import sidebar from "../components/sidebar/sidebar.vue";
 
 export default {
   components: {
     sidebar,
-<<<<<<< HEAD
     "document-container": DocumentContainer,
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
   },
   data() {
     return {
@@ -147,10 +121,7 @@ export default {
 
   &_backbutton,
   &_enterbutton {
-<<<<<<< HEAD
   &_backbutton,&_enterbutton {
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
     @extend .border-right;
     @extend .shadow;
     @extend .position-absolute;

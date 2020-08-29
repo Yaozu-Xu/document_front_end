@@ -109,7 +109,7 @@ export default {};
 .document {
   .document-content {
     h2 {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid $border-grey;
       a {
         color: $ink-blue;
       }
@@ -118,7 +118,7 @@ export default {};
       color: $ink-blue;
     }
     pre {
-      background-color: #f8f8f8;
+      background-color: $light-grey;
       white-space: pre;
       overflow-x: auto;
     }

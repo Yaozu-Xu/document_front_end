@@ -15,23 +15,15 @@ a {
   cursor: pointer;
 }
 
->>>>>>> 7fcf126... Refactor: refactor some code styles to keep the same with the rebased branch
 *,:after,:before {
->>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
   box-sizing: border-box;
   border: 0 solid #e2e8f0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .font-body {
   @include font-size(1rem);
 }
-=======
->>>>>>> 7fcf126... Refactor: refactor some code styles to keep the same with the rebased branch
 
 .font-sublist {
   @include font-size(0.75rem);
