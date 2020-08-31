@@ -75,4 +75,5 @@ export default {
     scss: ["~/assets/scss/main.scss"],
   },
   build: {},
+  serverMiddleware: [{ path: "/health", handler: "~/api/logger.js" }],
 };
