@@ -1,7 +1,7 @@
 <template>
   <div class="w-100">
     <b-navbar toggleable="lg" type="dark" class="w-100 bg-info">
-      <b-navbar-brand href="#"> Multi </b-navbar-brand>
+      <b-navbar-brand href="#">Multi</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
 
@@ -18,10 +18,10 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#"> 简体中文 </b-dropdown-item>
-            <b-dropdown-item href="#"> 繁體中文 </b-dropdown-item>
-            <b-dropdown-item href="#"> ENGLISH </b-dropdown-item>
-            <b-dropdown-item href="#"> JAPANESE </b-dropdown-item>
+            <b-dropdown-item href="#">简体中文</b-dropdown-item>
+            <b-dropdown-item href="#">繁體中文</b-dropdown-item>
+            <b-dropdown-item href="#">ENGLISH</b-dropdown-item>
+            <b-dropdown-item href="#">JAPANESE</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
         <div class="mb-0 opacity-4h5">
