@@ -1,6 +1,7 @@
 <template>
   <div class="w-100">
     <b-navbar toggleable="lg" type="dark" class="w-100 bg-info">
+<<<<<<< HEAD
       <b-navbar-brand href="#"> Multi </b-navbar-brand>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark" class="nav-position">
@@ -16,6 +17,9 @@
       </b-navbar-brand>
 =======
 >>>>>>> dcff4fe... Refactor: Running the prettier scripts
+=======
+      <b-navbar-brand href="#">Multi</b-navbar-brand>
+>>>>>>> c5c1ed1... Feature: Modify eslint rules
 
       <b-navbar-toggle target="nav-collapse" />
 
@@ -52,10 +56,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
           <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#"> 简体中文 </b-dropdown-item>
-            <b-dropdown-item href="#"> 繁體中文 </b-dropdown-item>
-            <b-dropdown-item href="#"> ENGLISH </b-dropdown-item>
-            <b-dropdown-item href="#"> JAPANESE </b-dropdown-item>
+            <b-dropdown-item href="#">简体中文</b-dropdown-item>
+            <b-dropdown-item href="#">繁體中文</b-dropdown-item>
+            <b-dropdown-item href="#">ENGLISH</b-dropdown-item>
+            <b-dropdown-item href="#">JAPANESE</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
         <div class="mb-0 opacity-4h5">
@@ -175,4 +179,3 @@ export default {};
 </script>
 
 <style lang="scss"></style>
->>>>>>> dcff4fe... Refactor: Running the prettier scripts

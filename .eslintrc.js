@@ -11,15 +11,11 @@ module.exports = {
     "@nuxtjs",
     "plugin:nuxt/recommended",
     "airbnb-base",
-    "plugin:prettier/recommended",
     "plugin:css-modules/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/vue",
   ],
   plugins: ["prettier", "css-modules"],
-  // add your custom rules here
-  rules: {
-    "linebreak-style": 0,
-    "prettier/prettier": "error",
-    "vue/html-self-closing": 0,
-    "vue/singleline-html-element-content-newline": 0,
-  },
+  rules: { "prettier/prettier": "error" },
 };
