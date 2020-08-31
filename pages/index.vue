@@ -151,7 +151,6 @@ export default {
   &--enter {
     transform: translateX(0);
     transition-duration: 0.35s;
-<<<<<<< HEAD
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
@@ -163,8 +162,6 @@ export default {
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
     transition-duration: .35s;
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
@@ -176,7 +173,6 @@ export default {
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
 }
-<<<<<<< HEAD
 
 .index_col {
   &--web {
@@ -186,6 +182,4 @@ export default {
       display: none;
     }
   }
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
 </style>
