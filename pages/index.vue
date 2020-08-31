@@ -43,10 +43,8 @@
         <b-col cols="4" lg="2" class="mt-1 border-right d-none d-sm-block">
           <sidebar />
         </b-col>
-        <b-col cols="8" lg="10" class="mt-1" style="z-index: -1">
-          1111111111111111111<br />
-          1111111111111111111<br />
-          占位
+        <b-col class="mt-1">
+          <document-container />
         </b-col>
       </b-row>
     </b-container>
@@ -54,11 +52,13 @@
 </template>
 
 <script>
+import DocumentContainer from "../components/public/DocumentContainer.vue";
 import sidebar from "../components/sidebar/sidebar.vue";
 
 export default {
   components: {
     sidebar,
+    "document-container": DocumentContainer,
   },
   data() {
     return {

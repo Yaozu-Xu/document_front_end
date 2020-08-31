@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="mt-5 mb-5 flex-column document">
+  <div class="m-md-5 m-sm-4 m-3 d-flex flex-column document">
     <div class="document-content mb-5">
       <h2 id="title-1" class="pb-3 mb-4">
         <a href="#title-1">Vue.js是什么</a>
@@ -98,7 +98,7 @@
         })
       </pre>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>
@@ -109,16 +109,16 @@ export default {};
 .document {
   .document-content {
     h2 {
-      border-bottom: 1px solid $border-grey;
+      border-bottom: 1px solid $border-color;
       a {
-        color: $ink-blue;
+        color: $primary-text;
       }
     }
     p {
-      color: $ink-blue;
+      color: primary-text;
     }
     pre {
-      background-color: $light-grey;
+      background-color: $background-color-pre;
       white-space: pre;
       overflow-x: auto;
     }
