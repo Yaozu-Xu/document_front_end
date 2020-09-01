@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="mt-5 mb-5 flex-column document">
+  <div class="m-md-5 m-sm-4 m-3 d-flex flex-column document">
     <div class="document-content mb-5">
       <h2 id="title-1" class="pb-3 mb-4">
         <a href="#title-1">Vue.js是什么</a>
@@ -98,7 +98,7 @@
         })
       </pre>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>
