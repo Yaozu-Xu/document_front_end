@@ -9,24 +9,9 @@ body {
 *,
 :after,
 :before {
-
-a {
-  text-decoration: none !important;
-  cursor: pointer;
-}
-
-*,:after,:before {
   box-sizing: border-box;
   border: 0 solid #e2e8f0;
 }
-
-
-.font-body {
-  @include font-size(1rem);
-}
-
-.font-sublist {
-  @include font-size(0.75rem);
 
 .font-body {
   @include font-size(1rem);
@@ -79,4 +64,3 @@ a {
 .bg-lightgrey {
   background-color: lightgray;
 }
-

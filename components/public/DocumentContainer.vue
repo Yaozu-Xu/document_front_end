@@ -109,16 +109,16 @@ export default {};
 .document {
   .document-content {
     h2 {
-      border-bottom: 1px solid $border-grey;
+      border-bottom: 1px solid $border-color;
       a {
-        color: $ink-blue;
+        color: $primary-text;
       }
     }
     p {
-      color: $ink-blue;
+      color: $primary-text;
     }
     pre {
-      background-color: $light-grey;
+      background-color: $background-color-pre;
       white-space: pre;
       overflow-x: auto;
     }

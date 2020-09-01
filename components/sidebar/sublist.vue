@@ -18,15 +18,10 @@ export default {
   props: {
     sublist: {
       type: Array,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
       default() {
         return [];
       },
     },
-<<<<<<< HEAD
   },
   data() {
     return {};
@@ -35,24 +30,3 @@ export default {
 </script>
 
 <style lang="scss"></style>
-=======
-      default  () {
-        return []
-      }
-    }
-=======
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
-  },
-  data() {
-    return {};
-  },
-};
-</script>
-
-<<<<<<< HEAD
-<style lang="scss">
-</style>
->>>>>>> 5b9cfe0... Refactor: refactor the code by using build-in classes in bootstrap
-=======
-<style lang="scss"></style>
->>>>>>> dcff4fe... Refactor: Running the prettier scripts
