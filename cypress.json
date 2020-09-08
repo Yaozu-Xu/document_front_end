@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "integrationFolder": "src/tests/specs",
+  "supportFile": "src/tests/support/index.js",
+  "pluginsFile": "src/tests/plugins/index.js",
+  "fixturesFolder": "src/tests/fixtures"
+}

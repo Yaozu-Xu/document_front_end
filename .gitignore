@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+nuxt-dist
+coverage
+cypress/screenshots
+cypress/videos
+.nyc_output

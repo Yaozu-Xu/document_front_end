@@ -1,0 +1,78 @@
+{
+  "name": "multi-language-documents-platform-front-end",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env BABEL_ENV=test nuxt",
+    "build": "nuxt build",
+    "build:test": "cross-env BABEL_ENV=test nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint src/**/*.{vue,css} --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style",
+    "coverage:clean": "rimraf ./.nyc_output/",
+    "coverage": "nyc report",
+    "test": "npm run coverage:clean && cypress run && npm run coverage",
+    "test:dev": "npm run coverage:clean && cypress open && npm run coverage",
+    "test:ci": "start-server-and-test start http://localhost:3000 test"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.0",
+    "sass-loader": "^10.0.2"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.1",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "cypress": "^5.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "husky": "^4.3.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "start-server-and-test": "^1.11.3",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.{js,vue}"
+    ],
+    "exclude": [
+      "**/*.{spec,test}.js"
+    ],
+    "extension": [
+      ".js",
+      ".vue"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100,
+    "per-file": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
