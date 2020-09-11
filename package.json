@@ -56,7 +56,7 @@
       "src/**/*.{js,vue}"
     ],
     "exclude": [
-      "**/*.{spec,test}.js"
+      "src/tests/**/*"
     ],
     "extension": [
       ".js",
