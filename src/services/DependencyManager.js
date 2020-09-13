@@ -1,5 +1,9 @@
+const TestDocumentRequester = require("./requesters/TestDocumentRequester");
+
 class DependencyManager {
-  #dependencies = {};
+  #dependencies = {
+    DocumentRequester: new TestDocumentRequester(),
+  };
 
   getDependency(dependencyName) {
     return this.#dependencies[dependencyName];
