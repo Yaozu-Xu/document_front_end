@@ -5,6 +5,10 @@ class DependencyManager {
     DocumentRequester: new TestDocumentRequester(),
   };
 
+  setDependency(dependencyName, dependency) {
+    this.#dependencies[dependencyName] = dependency;
+  }
+
   getDependency(dependencyName) {
     return this.#dependencies[dependencyName];
   }

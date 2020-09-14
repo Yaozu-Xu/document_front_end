@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
+const Logo = require("@/components/Logo.vue").default;
 
 export default {
   components: {
