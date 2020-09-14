@@ -5,17 +5,25 @@
   "scripts": {
     "dev": "cross-env BABEL_ENV=test nuxt",
     "build": "nuxt build",
-    "build:test": "cross-env BABEL_ENV=test nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{vue,css} --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
-    "coverage:clean": "rimraf ./.nyc_output/",
-    "coverage": "nyc report",
-    "test": "npm run coverage:clean && cypress run && npm run coverage",
-    "test:dev": "npm run coverage:clean && cypress open && npm run coverage",
-    "test:ci": "start-server-and-test start http://localhost:3000 test"
+    "coverage:combine:prepare": " mkdir -p coverage/all-coverage",
+    "coverage:combine:jest": " cp-cli coverage/jest-coverage/coverage-final.json coverage/all-coverage/jest-coverage.json",
+    "coverage:combine:cypress": " cp-cli coverage/cypress-coverage/coverage-final.json coverage/all-coverage/cypress-coverage.json",
+    "coverage:combine:merge": " nyc merge coverage/all-coverage .nyc_output/out.json",
+    "coverage:combine": " npm run coverage:combine:prepare && npm run coverage:combine:jest && npm run coverage:combine:cypress && npm run coverage:combine:merge",
+    "coverage": "npm run coverage:combine && nyc report --reporter=text",
+    "coverage:clean": "rimraf ./.nyc_output/ && mkdir -p .nyc_output",
+    "test:unit": "npm run coverage:clean && jest",
+    "test:integration": "npm run coverage:clean && cypress run",
+    "test:integration:dev": "npm run coverage:clean && cypress open",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "test:dev": "npm run test:unit && npm run test:integration:dev",
+    "test": " npm run test:all --slient && npm run coverage",
+    "test:ci": "cross-env BABEL_ENV=test start-server-and-test dev http://localhost:3000 test"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
@@ -26,11 +34,15 @@
     "sass-loader": "^10.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
     "@cypress/code-coverage": "^3.8.1",
     "@nuxtjs/eslint-config": "^3.1.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "cp-cli": "^2.0.0",
     "cross-env": "^7.0.2",
     "cypress": "^5.1.0",
     "eslint": "^7.2.0",
@@ -43,32 +55,39 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
     "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "start-server-and-test": "^1.11.3",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "vue-jest": "^3.0.6"
   },
   "nyc": {
     "include": [
       "src/**/*.{js,vue}"
     ],
     "exclude": [
-      "src/tests/**/*"
+      "src/tests/**/*",
+      "**/*.test.js"
     ],
     "extension": [
       ".js",
       ".vue"
     ],
-    "all": true,
+    "report-dir": "coverage/cypress-coverage",
     "check-coverage": true,
     "branches": 100,
     "lines": 100,
     "functions": 100,
     "statements": 100,
-    "per-file": true
+    "per-file": true,
+    "exclude-after-remap": false,
+    "reporter": [
+      "json"
+    ]
   },
   "husky": {
     "hooks": {
