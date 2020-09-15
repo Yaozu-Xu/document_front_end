@@ -27,4 +27,10 @@ export default {
       },
     },
   },
+  serverMiddleware: [
+    {
+      path: "/tests",
+      handler: "@/accessController/disableTestPagesInProduction",
+    },
+  ],
 };
