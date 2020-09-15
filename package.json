@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env BABEL_ENV=test nuxt",
+    "dev": "cross-env BABEL_ENV=test NODE_ENV=test nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -23,7 +23,10 @@
     "test:all": "npm -s run test:unit && npm -s run test:integration",
     "test:dev": "npm -s run test:unit && npm -s run test:integration:dev",
     "test": " npm -s run test:all --slient && npm -s run coverage",
-    "test:ci": "cross-env BABEL_ENV=test start-server-and-test dev http://localhost:3000 test"
+    "test:integration:ci": "npm -s run coverage:clean && cypress run --config-file cypress.test.json",
+    "test:all:ci": "npm -s run test:unit && npm -s run test:integration:ci",
+    "test:ci:coverage": " npm -s run test:all:ci --slient && npm -s run coverage",
+    "test:ci": "start-server-and-test dev http://localhost:3000 test:ci:coverage"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
