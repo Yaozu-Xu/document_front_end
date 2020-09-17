@@ -14,7 +14,7 @@ describe("TestDocumentRequester", () => {
   test("getDocumentById should return document by id", () => {
     const document = testDocumentRequester.getDocumentById(0);
     expect(document).toMatchObject({
-      content: "title-0",
+      content: "content-0",
       children: [5, 6, 7, 8],
       title: "title-0",
       language: "en-GB-oed",
