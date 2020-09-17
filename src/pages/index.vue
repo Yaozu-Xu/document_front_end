@@ -2,7 +2,9 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">multi-language-documents-platform-front-end</h1>
+      <h1 class="title" data-test="title">
+        multi-language-documents-platform-front-end
+      </h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
