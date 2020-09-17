@@ -3,38 +3,47 @@ class TestDocumentRequester {
 
   #documentsList = [
     {
-      content: "title-0",
+      title: "title-0",
+      content: "content-0",
       children: [5, 6, 7, 8],
     },
     {
-      content: "title-1",
+      title: "title-1",
+      content: "content-1",
       children: [5, 6, 7, 8],
     },
     {
-      content: "title-2",
+      title: "title-2",
+      content: "content-2",
       children: [5, 6, 7, 8],
     },
     {
-      content: "title-3",
+      title: "title-3",
+      content: "content-3",
       children: [5, 6, 7, 8],
     },
     {
-      content: "title-4",
+      title: "title-4",
+      content: "content-4",
       children: [5, 6, 7, 8],
     },
     {
+      title: "subtitle-5",
       content: "subcontent-5",
       children: [],
     },
     {
+      title: "subtitle-6",
       content: "subcontent-6",
       children: [],
     },
     {
+      title: "subtitle-7",
       content: "subcontent-7",
       children: [],
     },
     {
+      title: "subtitle-8",
       content: "subcontent-8",
       children: [],
     },
@@ -52,7 +61,6 @@ class TestDocumentRequester {
     const document = this.#documentsList[id];
     return {
       ...document,
-      title: document.content,
       language: "en-GB-oed",
     };
   }
